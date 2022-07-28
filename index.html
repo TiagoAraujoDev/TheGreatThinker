@@ -1,13 +1,54 @@
 <!DOCTYPE html>
-<html lang="en" />
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>TheGreatThinker</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- My external CSS -->
-    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Boxicons  -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-
-  <script src="./src/script.ts"></script>
+    <main>
+      <div class="title">
+        <h1>Ask me something and I'll answer...</h1>
+      </div>
+      <div class="user_input">
+        <input id="question" type="text" name="question" />
+        <button id="answerBtn" class="answerBtn">Ask</button>
+      </div>
+    </main>
+    <div class="modal_bg">
+      <div class="modal">
+        <div class="modal_box">
+          <h1 id="answer">Let me think for a moment</h1>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <address>
+        <p>Made by Tiago Araujo</p>
+      </address>
+      <div>
+        <ul>
+          <li>
+            <a href="https://github.com/TiagoAraujoDev" target="_blank"
+              ><i class="bx bxl-github"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/tiago-muniz-de-araujo-2b5b8a89/"
+              target="_blank"
+              ><i class="bx bxl-linkedin-square"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
