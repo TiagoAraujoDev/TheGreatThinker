@@ -136,3 +136,8 @@ footer ul li a i {
   color: white;
   padding: 0.2rem;
 }
+
+.modal_box .askAgainBtn:hover {
+  font-size: 1.8rem; 
+  background-color: black;
+}
