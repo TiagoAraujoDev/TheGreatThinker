@@ -93,7 +93,7 @@ footer ul li a i {
 }
 
 .modal_bg {
-  display: block;
+  display: none;
   position: absolute;
   right: 0;
   top: 0;
