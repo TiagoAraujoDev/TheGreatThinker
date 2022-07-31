@@ -2,6 +2,12 @@ const modal = document.getElementById("modal");
 const answerBtn = document.getElementById("answerBtn");
 const answer = document.getElementById("answer");
 
+const phrases = [
+  "Let me think for a moment...",
+  "Hum... interesting...",
+  "Great question! Let me see...",
+];
+
 const answerArr = [
   "Hum... I don't think so!",
   "YEAH! Definitely",
@@ -9,24 +15,32 @@ const answerArr = [
   "Don't count on it",
 ];
 
-function thinking() {
-  const phrase = "Let me think for a moment...";
-
-  let letter;
-  for (let i = 0; i < phrase.length; i++) {
-    letter = phrase.slice(i, i + 1);
-    answer.textContent = letter;
-    setInterval(500);
-  }
-
-
+function showAnswer() {
+  const randomIndex = Math.floor(Math.random() * answerArr.length) + 1;
+  answer.textContent = answerArr[randomIndex];
 }
 
-function showAnswer() {
+let counter = 0;
+function thinking() {
+  const randomPhrase = Math.floor(Math.random() * phrases.length) + 1;
+
+  answer.textContent += phrases[randomPhrase].charAt(counter);
+
+  counter += 1;
+
+  if (counter < phrases.length) {
+    window.setTimeout(thinking, 100);
+  } else {
+    counter = 0;
+    showAnswer();
+  }
+}
+
+function startThinker() {
   modal.style.display = "block";
   thinking();
 }
 
 answerBtn.addEventListener("click", () => {
-  showAnswer();
+  startThinker();
 });
