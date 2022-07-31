@@ -115,6 +115,7 @@ footer ul li a i {
 
 .modal_box {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 80%;
@@ -123,4 +124,15 @@ footer ul li a i {
 .modal_box h1 {
   font-size: 1.6rem;
   font-family: 'Courier New', Courier, monospace;
+}
+
+.modal_box .askAgainBtn {
+  width: 100%;
+  border: 0.1rem solid black;
+  border-radius: 0.3rem;
+  background-color: #8040c0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.6rem;
+  color: white;
+  padding: 0.2rem;
 }
